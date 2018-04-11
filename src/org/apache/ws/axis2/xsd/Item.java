@@ -7,7 +7,7 @@
 package org.apache.ws.axis2.xsd;
 
 
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 /**
  *  Item bean class
@@ -15,7 +15,8 @@ import javax.xml.bind.annotation.XmlType;
 @SuppressWarnings({"unchecked",
     "unused"
 })
-@XmlType(propOrder = { "name", "yearOfPublication", "author", "chapters" }, name = "item")
+@XmlRootElement(name = "item")
+@XmlAccessorType(XmlAccessType.NONE)
 public class Item implements org.apache.axis2.databinding.ADBBean {
     /* This type was generated from the piece of schema that had
        name = Item
@@ -26,6 +27,7 @@ public class Item implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for Author
      */
+    @XmlElement(name = "author")
     protected org.apache.ws.axis2.xsd.Author localAuthor;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -38,6 +40,7 @@ public class Item implements org.apache.axis2.databinding.ADBBean {
      * field for Chapters
      * This was an Array!
      */
+    @XmlElement(name = "chapters")
     protected org.apache.ws.axis2.xsd.Chapter[] localChapters;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -49,6 +52,7 @@ public class Item implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for Name
      */
+    @XmlElement(name = "itemName")
     protected java.lang.String localName;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -60,6 +64,7 @@ public class Item implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for YearOfPublication
      */
+    @XmlElement(name = "yearOfPublication")
     protected long localYearOfPublication;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method

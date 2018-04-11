@@ -10,6 +10,7 @@ import handler.Handler;
 import org.apache.ws.axis2.xsd.Item;
 import soap.GetItemsResponse;
 
+import javax.xml.bind.JAXBException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class IServiceSkeleton {
      * @param getItems
      * @return getItemsResponse
      */
-    public soap.GetItemsResponse getItems(soap.GetItems getItems) {
+    public soap.GetItemsResponse getItems(soap.GetItems getItems) throws JAXBException {
         //TODO : fill this with the necessary business logic
         GetItemsResponse response = new GetItemsResponse();
         List<Item> items = handler.getItems();

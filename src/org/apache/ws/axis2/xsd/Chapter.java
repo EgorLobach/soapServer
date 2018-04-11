@@ -7,12 +7,16 @@
 package org.apache.ws.axis2.xsd;
 
 
+import javax.xml.bind.annotation.*;
+
 /**
  *  Chapter bean class
  */
 @SuppressWarnings({"unchecked",
     "unused"
 })
+@XmlRootElement(name = "chapter")
+@XmlAccessorType(XmlAccessType.NONE)
 public class Chapter implements org.apache.axis2.databinding.ADBBean {
     /* This type was generated from the piece of schema that had
        name = Chapter
@@ -23,6 +27,7 @@ public class Chapter implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for Name
      */
+    @XmlElement(name="chapterName")
     protected java.lang.String localName;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -34,6 +39,7 @@ public class Chapter implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for Text
      */
+    @XmlElement(name="text")
     protected java.lang.String localText;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method

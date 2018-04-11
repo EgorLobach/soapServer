@@ -7,12 +7,17 @@
 package org.apache.ws.axis2.xsd;
 
 
+import javax.xml.bind.annotation.*;
+
 /**
  *  Author bean class
  */
 @SuppressWarnings({"unchecked",
     "unused"
 })
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.NONE)
 public class Author implements org.apache.axis2.databinding.ADBBean {
     /* This type was generated from the piece of schema that had
        name = Author
@@ -23,6 +28,7 @@ public class Author implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for FirstName
      */
+    @XmlElement(name="firstName")
     protected java.lang.String localFirstName;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
@@ -34,6 +40,7 @@ public class Author implements org.apache.axis2.databinding.ADBBean {
     /**
      * field for SecondName
      */
+    @XmlElement(name="secondName")
     protected java.lang.String localSecondName;
 
     /*  This tracker boolean wil be used to detect whether the user called the set method
